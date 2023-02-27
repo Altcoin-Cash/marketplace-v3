@@ -2,8 +2,8 @@
 
 // 1. Set up the network your smart contracts are deployed to.
 // First, import the chain from the package, then set the NETWORK variable to the chain.
-import { Mainnet } from "@thirdweb-dev/chains";
-export const NETWORK = Mainnet;
+import { Altcoinchain } from "@thirdweb-dev/chains";
+export const NETWORK = Altcoinchain;
 
 // 2. The address of the marketplace V3 smart contract.
 // Deploy your own: https://thirdweb.com/thirdweb.eth/MarketplaceV3
