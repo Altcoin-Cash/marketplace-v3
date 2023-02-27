@@ -11,7 +11,6 @@ import React, { useState } from "react";
 import Container from "../../../components/Container/Container";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { CHAIN_ID_TO_NAME, NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
-import { ChainId} from "@thirdweb-dev/chains";
 import {
   ETHERSCAN_URL,
   MARKETPLACE_ADDRESS,
@@ -356,7 +355,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 export const getStaticProps: GetStaticProps = async (context) => {
   const tokenId = context.params?.tokenId as string;
 
-  const sdk = new ThirdwebSDK(Chain.chainId[NETWORK.chainId]);
+  const sdk = new ThirdwebSDK(CHAIN_ID_TO_NAME[NETWORK.chainId]);
 
   const contract = await sdk.getContract(NFT_COLLECTION_ADDRESS);
 
@@ -378,7 +377,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const sdk = new ThirdwebSDK(Chain.chainId[NETWORK.chainId]);
+  const sdk = new ThirdwebSDK(CHAIN_ID_TO_NAME[NETWORK.chainId]);
 
   const contract = await sdk.getContract(NFT_COLLECTION_ADDRESS);
 
