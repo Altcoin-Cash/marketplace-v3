@@ -13,6 +13,7 @@ import Skeleton from "../../components/Skeleton/Skeleton";
 import {
   MARKETPLACE_ADDRESS,
   NFT_COLLECTION_ADDRESS,
+  NFT_COLLECTION_ADDRESS_2,
 } from "../../const/contractAddresses";
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
@@ -28,7 +29,7 @@ export default function ProfilePage() {
   const router = useRouter();
   const [tab, setTab] = useState<"nfts" | "listings" | "auctions">("nfts");
 
-  const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
+  const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS, NFT_COLLECTION_ADDRESS_2);
 
   const { contract: marketplace } = useContract(
     MARKETPLACE_ADDRESS,
