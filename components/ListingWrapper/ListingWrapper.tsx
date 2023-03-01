@@ -3,7 +3,6 @@ import { DirectListingV3, EnglishAuction } from "@thirdweb-dev/sdk";
 import Link from "next/link";
 import React from "react";
 import { NFT_COLLECTION_ADDRESS } from "../../const/contractAddresses";
-import { NFT_COLLECTION_ADDRESS_2 } from "../../const/contractAddresses";
 import styles from "../../styles/Buy.module.css";
 import NFT from "../NFT/NFT";
 import Skeleton from "../Skeleton/Skeleton";
@@ -17,9 +16,8 @@ type Props = {
  */
 export default function ListingWrapper({ listing }: Props) {
   const { contract: nftContract } = useContract(NFT_COLLECTION_ADDRESS);
-  const { contract: nftContract_2 } = useContract(NFT_COLLECTION_ADDRESS_2);
 
-  const { data: nft, isLoading } = useNFT(nftContract, nftContract_2, listing.asset.id);
+  const { data: nft, isLoading } = useNFT(nftContract, listing.asset.id);
 
   if (isLoading) {
     return (
@@ -33,7 +31,7 @@ export default function ListingWrapper({ listing }: Props) {
 
   return (
     <Link
-      href={`/token/${[NFT_COLLECTION_ADDRESS, NFT_COLLECTION_ADDRESS_2]}/${nft.metadata.id}`}
+      href={`/token/${[NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`}
       key={nft.metadata.id}
       className={styles.nftContainer}
     >
