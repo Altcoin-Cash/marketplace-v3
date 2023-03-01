@@ -38,7 +38,7 @@ const Home: NextPage = () => {
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
-                  Buy, Sell, ALT NFT's
+                  Buy, Sell, ALT NFTs
                 </span>
                 <br />
                 on the Altcoinchain!!
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                   using THIRDWEB
                 </Link>{" "}
                 have the tools you need to create
-                NFT's in <b>minutes</b>, <i>not hours</i>.
+                NFTs in <b>minutes</b>, <i>not hours</i>.
               </p>
 
               <div className={styles.heroCtaContainer}>
