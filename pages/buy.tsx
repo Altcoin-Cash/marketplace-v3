@@ -7,7 +7,8 @@ import { NFT_COLLECTION_ADDRESS_2 } from "../const/contractAddresses";
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
-  const { contract } = useContract(NFT_COLLECTION_ADDRESS, NFT_COLLECTION_ADDRESS_2);
+  const { contract } = useContract(NFT_COLLECTION_ADDRESS);
+  const { contract } = useContract(NFT_COLLECTION_ADDRESS_2);
   const { data, isLoading } = useNFTs(contract);
 
   return (
