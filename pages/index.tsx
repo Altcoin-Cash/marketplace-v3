@@ -61,10 +61,10 @@ const Home: NextPage = () => {
                 </Link>
                 <Link
                   className={styles.secondaryCta}
-                  href="https://github.com/thirdweb-example/marketplace-v3"
+                  href="https://altcoinchain.org"
                   target="_blank"
                 >
-                  GitHub
+                  ALT Website
                 </Link>
               </div>
             </div>
