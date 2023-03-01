@@ -29,6 +29,7 @@ export default function ProfilePage() {
   const router = useRouter();
   const [tab, setTab] = useState<"nfts" | "listings" | "auctions">("nfts");
 
+  const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
   const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS, NFT_COLLECTION_ADDRESS_2);
 
   const { contract: marketplace } = useContract(
