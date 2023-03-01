@@ -38,10 +38,10 @@ const Home: NextPage = () => {
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
-                  Build NFT Marketplaces
+                  Buy, Sell, ALT NFT's
                 </span>
                 <br />
-                faster than ever.
+                on the Altcoinchain!!
               </h1>
               <p className={styles.heroSubtitle}>
                 <Link
@@ -49,10 +49,10 @@ const Home: NextPage = () => {
                   href="https://thirdweb.com"
                   target="_blank"
                 >
-                  thirdweb
+                  using THIRDWEB
                 </Link>{" "}
-                gives you the tools you need to create audited, performant, and
-                flexible NFT marketplaces in <b>hours</b>, <i>not months</i>.
+                have the tools you need to create
+                NFT's in <b>minutes</b>, <i>not hours</i>.
               </p>
 
               <div className={styles.heroCtaContainer}>
