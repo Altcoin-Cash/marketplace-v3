@@ -15,7 +15,8 @@ import SaleInfo from "../components/SaleInfo/SaleInfo";
 
 export default function Sell() {
   // Load all of the NFTs from the NFT Collection
-  const { contract } = useContract(NFT_COLLECTION_ADDRESS, NFT_COLLECTION_ADDRESS_2);
+  const { contract } = useContract(NFT_COLLECTION_ADDRESS);
+  const { contract } = useContract(NFT_COLLECTION_ADDRESS_2);
   const address = useAddress();
   const { data, isLoading } = useOwnedNFTs(contract, address);
 
