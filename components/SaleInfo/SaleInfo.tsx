@@ -298,7 +298,7 @@ export default function SaleInfo({ nft }: Props) {
                 position: "bottom-center",
               });
               router.push(
-                `/token/${NFT_COLLECTION_ADDRESS_2}/${nft.metadata.id}`
+                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`
               );
             }}
           >
