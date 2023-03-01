@@ -51,7 +51,8 @@ export default function SaleInfo({ nft }: Props) {
   // useContract is a React hook that returns an object with the contract key.
   // The value of the contract key is an instance of an NFT_COLLECTION on the blockchain.
   // This instance is created from the contract address (NFT_COLLECTION_ADDRESS)
-  const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS, NFT_COLLECTION_ADDRESS_2);
+  const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
+  const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS_2);
 
   // Hook provides an async function to create a new auction listing
   const { mutateAsync: createAuctionListing } =
@@ -226,7 +227,8 @@ export default function SaleInfo({ nft }: Props) {
                 position: "bottom-center",
               });
               router.push(
-                `/token/${NFT_COLLECTION_ADDRESS, NFT_COLLECTION_ADDRESS_2}/${nft.metadata.id}`
+                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`
+                `/token/${NFT_COLLECTION_ADDRESS_2}/${nft.metadata.id}`
               );
             }}
           >
@@ -301,7 +303,8 @@ export default function SaleInfo({ nft }: Props) {
                 position: "bottom-center",
               });
               router.push(
-                `/token/${NFT_COLLECTION_ADDRESS, NFT_COLLECTION_ADDRESS_2}/${nft.metadata.id}`
+                `/token/${NFT_COLLECTION_ADDRESS_2}/${nft.metadata.id}`
+                `/token/${NFT_COLLECTION_ADDRESS_2}/${nft.metadata.id}`
               );
             }}
           >
