@@ -9,6 +9,7 @@ import React from "react";
 import {
   MARKETPLACE_ADDRESS,
   NFT_COLLECTION_ADDRESS,
+  NFT_COLLECTION_ADDRESS_2,
 } from "../../const/contractAddresses";
 import Skeleton from "../Skeleton/Skeleton";
 import styles from "./NFT.module.css";
@@ -27,6 +28,7 @@ export default function NFTComponent({ nft }: Props) {
   const { data: directListing, isLoading: loadingDirect } =
     useValidDirectListings(marketplace, {
       tokenContract: NFT_COLLECTION_ADDRESS,
+      tokenContract: NFT_COLLECTION_ADDRESS_2,
       tokenId: nft.metadata.id,
     });
 
@@ -34,6 +36,7 @@ export default function NFTComponent({ nft }: Props) {
   const { data: auctionListing, isLoading: loadingAuction } =
     useValidEnglishAuctions(marketplace, {
       tokenContract: NFT_COLLECTION_ADDRESS,
+      tokenContract: NFT_COLLECTION_ADDRESS_2,
       tokenId: nft.metadata.id,
     });
 
