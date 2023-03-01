@@ -51,7 +51,7 @@ const Home: NextPage = () => {
                 >
                   using THIRDWEB
                 </Link>{" "}
-                have the tools you need to create
+                you will have the tools you need to create
                 NFTs in <b>minutes</b>, <i>not hours</i>.
               </p>
 
